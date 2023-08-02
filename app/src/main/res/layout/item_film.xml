@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_height="150dp">
+    
+    <TableRow android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+        <ImageView
+            android:id="@+id/ivAvatarFilm"
+            android:layout_width="100dp"
+            android:src="@drawable/ic_banner"
+            android:layout_height="match_parent"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            tools:ignore="UselessLeaf" >
+
+            <TextView
+                android:id="@+id/tvTitleFilm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/txt_fast_amp_furious_x_2023"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                tools:ignore="SpUsage,TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/tvDateFilm"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:textSize="12sp"
+                android:text="@string/txt_time"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDetailFilm"
+                android:layout_width="match_parent"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:text="@string/txt_overview"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </TableRow>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    buildFeatures{
+        viewBinding true
+    }
+
+    namespace 'com.thuctran.testapiappthemovie'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.thuctran.testapiappthemovie"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    //ViewModel
+    def lifecycle_version = "2.5.1"
+    def fragment_version = "1.4.0"
+
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    //noinspection GradleDependency
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
+    //retrofit2 để thực hiện call API
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    //Gson, thư viện để match dữ liệu từ postman
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //glide github
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+}

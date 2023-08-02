@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestAPI App TheMovie</string>
+    <string name="txt_user_name">User name</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register_now">Register now?</string>
+    <string name="txt_fast_amp_furious_x_2023"><![CDATA[Fast & Furious X (2023)]]></string>
+    <string name="txt_time">05/19/2023 (US)</string>
+    <string name="txt_overview">Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.</string>
+    <string name="txt_list_movie_is_empty">list Movie is Empty!</string>
+</resources>
